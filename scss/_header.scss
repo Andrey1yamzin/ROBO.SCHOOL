@@ -1,0 +1,55 @@
+.header {
+
+    &-wrapper {
+       
+    }
+
+    &-row {
+
+    }
+
+    &-colum {
+
+    }
+
+    &__logo {
+
+    }
+
+    &__menu {
+
+    }
+
+    &__contacts {
+
+    }
+}
+
+
+.logo {
+    font-family: 'Jost', sans-serif;
+    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+}
+
+.menu {
+
+    &-items {
+
+    }
+
+    &-item {
+    }
+
+    &-link {
+    }
+}
+
+
+
+.contacts {
+}
+
+.wrapper-content{
+
+}
