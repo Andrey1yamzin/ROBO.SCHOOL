@@ -1,55 +1,64 @@
-.header {
+body{
+    font-family: Jost;
+    line-height: 1.6;
+    font-size: 18px;
+    
+}
+.wrapper{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    &-wrapper {
+[class*="__container"]{
+    max-width: 1747px;
+    margin: 0 auto;
+}
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    color: #FFFFFF;
+    a{
+        color: #FFFFFF;
+    }
+    
+        &__container{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 15px;
+        }
+        &__logo{
+            font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 700;
+        }
+        &__menu{}
+        &__contacts{
+            font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 600;
+            
+        }
+}
+
+.menu{
+    flex: 1 1 auto;
+    
+    &__lists{
+        display: flex;
+        justify-content: center;
        
     }
-
-    &-row {
-
+    &__item{
+        font-size: 1.11em;
+        margin:0 40px 0 0;
+        &:last-child{
+            margin-right: 0;
+        }
     }
-
-    &-colum {
-
-    }
-
-    &__logo {
-
-    }
-
-    &__menu {
-
-    }
-
-    &__contacts {
-
-    }
-}
-
-
-.logo {
-    font-family: 'Jost', sans-serif;
-    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
-    font-weight: 700;
-}
-
-.menu {
-
-    &-items {
-
-    }
-
-    &-item {
-    }
-
-    &-link {
-    }
-}
-
-
-
-.contacts {
-}
-
-.wrapper-content{
-
+    &__link{}
+    
 }
