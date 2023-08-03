@@ -10,7 +10,7 @@
 .promo__content{
     display: flex;
     padding: 150px 0 0 0;
-    align-items: center;
+    // align-items: center;
 }
 .block-text__title{
     color: #FFFFFF;
@@ -47,6 +47,7 @@
 }
 .block-text__wrapper{
     max-width: 516px;
+    padding: 264px 0 0 0;
 }
 .block-image{
     flex: 1 1 51%;

@@ -62,3 +62,15 @@ body{
     &__link{}
     
 }
+
+
+@media (max-width: 890px){
+
+    .menu{
+        display: none;
+    }
+
+    .header__contacts{
+        display: none;
+    }
+}
