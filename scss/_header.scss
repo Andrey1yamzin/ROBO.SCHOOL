@@ -2,7 +2,6 @@ body{
     font-family: Jost;
     line-height: 1.6;
     font-size: 18px;
-    
 }
 .wrapper{
     overflow: hidden;
@@ -24,13 +23,21 @@ body{
     z-index: 50;
     color: #FFFFFF;
     a{
-        color: #FFFFFF;
+        color: #ffffff;
+        transition: all .3s ease;
+        &:hover{
+            color: #cacaca;
+        }
     }
     
         &__container{
             display: flex;
             justify-content: space-between;
-            padding: 30px 15px;
+            padding-bottom: 30px;
+            padding-left: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+            padding-right: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+            padding-top:calc(17px + (30 - 17) * ((100vw - 320px) / (1920 - 320)));
+            position: relative;
         }
         &__logo{
             font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
@@ -50,11 +57,14 @@ body{
     &__lists{
         display: flex;
         justify-content: center;
+        height: 100%;
+        
        
     }
     &__item{
         font-size: 1.11em;
         margin:0 40px 0 0;
+        align-self: center;
         &:last-child{
             margin-right: 0;
         }
@@ -62,15 +72,83 @@ body{
     &__link{}
     
 }
+.header-buttons{
+display: none;
+}
 
 
-@media (max-width: 890px){
-
-    .menu{
-        display: none;
+@media (max-width: 820px){
+    .lock{
+        overflow: hidden;
+    }
+    .header__logo{
+        padding-top: calc(10px - (0 + 10) * ((100vw - 320px) / (890 - 320)));
     }
 
     .header__contacts{
         display: none;
+    }
+
+    .header-buttons{
+        display: flex;
+        position: relative;
+    
+        .header-buttons__phone{
+            margin-right: 10px;
+        }
+    }
+
+
+    
+    .menu-close{
+        z-index: 3;
+        position: absolute;
+        right: 0;
+       
+    }
+
+    
+    .visible__button-close{
+       top: 0;
+       transition: all .3s ease;
+    }
+    .hidden__button-close{
+        top: -100vh;
+        
+    }
+
+
+
+    .menu{
+        z-index: 2;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        background: #141024;
+        transition: all .3s ease;
+        .menu__lists{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            .menu__item{
+                margin-right: 0;
+                margin-bottom: 20px;
+                font-size: 30px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+    }
+    .hidden__menu{
+        top: -100vh;
+    }
+    .visible__menu{
+        top: 0;  
+        overflow: scroll;
     }
 }
