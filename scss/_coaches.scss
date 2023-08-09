@@ -1,0 +1,6 @@
+.coaches__content{
+    width: 100%;
+    padding-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
+    padding-right: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
+    padding-top: calc(60px + (120 - 60) * ((100vw - 320px) / (1920 - 320)));
+}
