@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: Jost;
     line-height: 1.6;
@@ -29,6 +32,7 @@ body{
 @import 'coaches.scss';
 @import 'rate.scss';
 @import 'entry.scss';
+@import 'footer.scss';
 
 
 // font-family: 'Jost', sans-serif;

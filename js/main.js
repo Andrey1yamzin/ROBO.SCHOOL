@@ -1,5 +1,6 @@
 'use strict'
 window.addEventListener('DOMContentLoaded', function(){
+    //меню бургер
     let menu = document.querySelector('.header__menu');
     let buttonOpen = document.querySelector('.menu-open');
     let buttonClose = document.querySelector('.menu-close');
@@ -22,4 +23,25 @@ window.addEventListener('DOMContentLoaded', function(){
         document.body.classList.remove('lock');
         
     }
+// ------------------------------------------------------------------------- //
+
+    let parentFooterBlock = document.querySelector(".footer-content");
+    let parentChildrenFooterBlock = document.querySelector(".footer__logo");
+    let portableTlement = document.querySelector(".footer__subtitle");
+
+    window.addEventListener('resize', function(){
+        let viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        
+        if(viewportWidth <= 480){
+            if(!portableTlement.classList.contains('rescheduled')){
+                parentFooterBlock.insertBefore(portableTlement, parentFooterBlock.children[2]);
+                portableTlement.classList.add('rescheduled');
+            }
+        }else{
+            if(portableTlement.classList.contains('rescheduled')){
+                parentChildrenFooterBlock.insertBefore(portableTlement, parentChildrenFooterBlock.children[1]);
+                portableTlement.classList.remove('rescheduled');
+            }
+        }
+    })
 })

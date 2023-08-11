@@ -13,12 +13,12 @@
     align-items: flex-start;
     justify-content: space-between;
     min-height:500px;
-    flex-wrap: wrap;
+
 }
 .cards-rate__item{
     display: flex;
     flex-direction: column;
-    padding: 40px calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+    padding: 40px calc(20px + (40 - 20) * ((100vw - 992px) / (1920 - 992)));
     margin-right: calc(20px + (40 - 20) * ((100vw - 992px) / (1920 - 992)));
     border: 1px solid #14102433;
     border-radius: 20px;
@@ -26,6 +26,7 @@
     flex: 0 0 calc(300px + (360 - 300) * ((100vw - 992px) / (1920 - 992)));
     transition: all .6s ease;
     min-height: 460px;
+    width: 360px;
 
     &:last-child{
         margin-right: 0;
@@ -69,17 +70,20 @@
 .button {
 }
 
-
-
-@media (max-width: 1070px){
+@media (max-width: 1280px){
+    .rate__cards{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 1200px){
+    .rate__cards{
+        justify-content: flex-start;
+        padding-right: calc(0px + (150 - 0) * ((100vw - 320px) / (1200 - 320)));
+        padding-left: calc(0px + (250 - 0) * ((100vw - 320px) / (1200 - 320)));
+    }
 
     .rate__title-main{
         text-align: center;
-    }
-    .rate__cards{
-        justify-content: flex-start;
-        padding-right: calc(0px + (150 - 0) * ((100vw - 320px) / (1070 - 320)));
-        padding-left: calc(0px + (150 - 0) * ((100vw - 320px) / (1070 - 320)));
     }
     .cards-rate__item{
         margin-bottom: 30px;
@@ -87,16 +91,15 @@
 }
 
 @media (max-width: 992px){
-
     .rate__title-main{
         text-align: center;
     }
     .rate__cards{
        flex-direction: column;
-       justify-content: center;
        align-items: center;
     }
     .cards-rate__item{
         margin-bottom: 30px;
+        width: 300px;
     }
 }

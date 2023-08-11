@@ -1,4 +1,96 @@
 .entry{
     background-color: #D52027;
     margin-top: 120px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 120px;
+        background:url(../image/entry/percent.svg) 0% 100%/cover no-repeat;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+.entry__content{
+    display: flex;
+    padding-top: 87px;
+    padding-bottom: 87px;
+    padding-left: calc(10px + (60 - 1) * ((100vw - 320px) / (1920 - 320)));;
+    padding-right: calc(10px + (60 - 10) * ((100vw - 320px) / (1920 - 320)));;
+    justify-content: center;
+}
+
+.entry__text{
+    padding-top: 20px;
+    h2{
+        font-size: calc(30px + (36 - 30) * ((100vw - 320px) / (1920 - 320)));
+        color: #fff;
+        font-weight: 600;
+        width: 340px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+        color: #fff;
+        font-weight: 400;
+    }
+    padding-right: 104px;
+}
+
+.entry-form__items{
+    display: flex;
+    flex-direction: column;
+}
+.entry-form__item{
+    height: 64px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 19px 20px;
+    color: #282944c2;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+}
+.entry-form__button{
+    background-color: #141024;
+    padding: 19px 180px;
+    padding-left: calc(90px + (180 - 90) * ((100vw - 320px) / (1920 - 320)));
+    padding-right: calc(90px + (180 - 90) * ((100vw - 320px) / (1920 - 320)));
+    &:hover{
+        background-color: #1a1430;
+        
+    }
+}
+.entry__form{
+    position: relative;
+    z-index: 3;
+}
+@media (max-width: 992px){
+    .entry-form__items{
+        padding-right: calc(0px + (200 - 0) * ((100vw - 320px) / (992 - 320)));
+        padding-left: calc(0px + (200 - 0) * ((100vw - 320px) / (992 - 320)));
+
+    }
+    .entry__content{
+        flex-direction: column;
+    }
+    .entry__text{
+        padding-right: 0;
+        margin-bottom: 40px;
+        h2{
+            width: 100%;
+        }
+        text-align: center;
+    }
+
+
+    .entry{
+        &::after{
+            display: none;
+        }
+    }
 }

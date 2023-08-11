@@ -9,9 +9,26 @@
     color: #FFFFFF;
     a{
         color: #ffffff;
-        transition: all .3s ease;
+        transition: color .3s ease;
+        position: relative;
+        overflow: hidden;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #cacaca;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transition: all .4s ease;
+            transform-origin: left;
+        }
         &:hover{
             color: #cacaca;
+            &::after{
+                transform: scaleX(1); 
+            }
         }
     }
     
@@ -25,17 +42,25 @@
             position: relative;
         }
         &__logo{
-            font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
-            font-weight: 700;
+            
         }
         &__menu{}
         &__contacts{
-            font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
-            font-weight: 600;
+            a::after{
+                display: none;
+            }
             
         }
 }
+.logo{
+            font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 700;
+}
 
+.contacts{
+    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 600;
+}
 .menu{
     flex: 1 1 auto;
     
@@ -80,6 +105,11 @@ display: none;
     
         .header-buttons__phone{
             margin-right: 10px;
+            a{
+                &::after{
+                    display: none;
+                }
+            }
         }
     }
 
