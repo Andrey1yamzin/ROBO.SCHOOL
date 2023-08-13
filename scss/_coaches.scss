@@ -1,6 +1,57 @@
+
+.coaches{
+    position: relative;
+}
+.coaches__wrapper{
+    overflow: inherit;
+}
 .coaches__content{
     width: 100%;
     padding-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
     padding-right: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
     padding-top: calc(60px + (120 - 60) * ((100vw - 320px) / (1920 - 320)));
+    height: 900px;
+}
+.coaches__slider{
+    position:absolute;
+    left:calc(10px + (372 - 10) * ((100vw - 320px) / (1920 - 320)));;
+}
+.swiper{
+    
+}
+.swiper-wrapper{
+
+   
+    
+}
+.swiper-slide{
+    
+    max-width: 360px;
+    img{
+        max-width: 100%;
+    }
+    h3{
+        font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    p{
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+        color:#141024;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    a{
+        color:#D52027;
+        font-weight: 400;
+        margin-top: 20px;
+        display: inline-block;
+    }
+}
+
+
+@media (max-width: 992px){
+    .swiper-slide{
+        max-width: 220px;
+    }
 }
