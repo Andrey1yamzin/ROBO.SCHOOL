@@ -57,9 +57,9 @@
 }
 .entry-form__button{
     background-color: #141024;
-    padding: 19px 180px;
-    padding-left: calc(90px + (180 - 90) * ((100vw - 320px) / (1920 - 320)));
-    padding-right: calc(90px + (180 - 90) * ((100vw - 320px) / (1920 - 320)));
+    padding: 19px 0;
+    width: 500px;
+    height: 64px;
     &:hover{
         background-color: #1a1430;
         
@@ -85,8 +85,11 @@
             width: 100%;
         }
         text-align: center;
+        
     }
-
+    .entry-form__button{ 
+        width: 100%;
+    }
 
     .entry{
         &::after{

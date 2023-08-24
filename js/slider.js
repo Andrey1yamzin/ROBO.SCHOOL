@@ -10,7 +10,7 @@ scrollbar: {
     draggable: true
 },
 //отключение перетаскивания
-simulateTouch:false,
+simulateTouch:true,
 
 
 
@@ -28,23 +28,24 @@ breakpoints: {
         slidesPerView:1,
         spaceBetween:20,
     },
-    480:{
+    481:{
         slidesPerView:2,
+        spaceBetween:20,
+    },
+    637:{
+        slidesPerView:3,
         spaceBetween:20,
     },
     
     767:{
-        slidesPerView:4,
+        slidesPerView:3,
         spaceBetween:40,
     },
     992:{
-        slidesPerView:4,
+        slidesPerView:3,
         spaceBetween:30,
     },
     1920:{
-        //колличество для показа
-        //отступы между слайдами
-        slidesPerView:3,
         spaceBetween:40,
     }
 }
