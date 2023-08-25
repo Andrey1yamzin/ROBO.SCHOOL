@@ -46,6 +46,7 @@ breakpoints: {
         spaceBetween:30,
     },
     1920:{
+        slidesPerView:3,
         spaceBetween:40,
     }
 }
